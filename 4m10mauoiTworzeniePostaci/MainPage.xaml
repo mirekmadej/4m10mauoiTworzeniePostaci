@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="_4m10mauoiTworzeniePostaci.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+
+            <Label Text="Wynik" x:Name="lblWynik" />
+            <Button Text="klik" Clicked="btnSprawdz" />
+            <Entry Placeholder="podaj imię" x:Name="entImie" />
+            <HorizontalStackLayout Spacing="10">
+                <Label Text="Rasa" />
+                <RadioButton 
+                    Content="człowiek" 
+                    WidthRequest="100" 
+                    IsChecked="True"
+                    x:Name="rbtCzlowiek"
+                    CheckedChanged="rbtChanged"
+                    />
+                <RadioButton 
+                    Content="elf" 
+                    WidthRequest="100" 
+                    x:Name="rbtElf"
+                    CheckedChanged="rbtChanged"
+                    />
+                <RadioButton 
+                    Content="goblin" 
+                    WidthRequest="100" 
+                    x:Name="rbtGoblin"
+                    CheckedChanged="rbtChanged"
+                    />                
+            </HorizontalStackLayout>
+            <Label Text="po wyraniu rasy ma się pojawić w polu wzrost odpowiedni placeholder" />
+            <Label Text="człowiek ma wzrost: 160-190, elf: 180-220, goblin: 120-160" />
+            <HorizontalStackLayout Spacing="10">
+                <Label Text="wzrost" />
+                <Entry
+                    x:Name="entWzrost"
+                    Placeholder="wzrost: 160 - 190"
+                    WidthRequest="300"
+                    />
+            </HorizontalStackLayout>
+
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
